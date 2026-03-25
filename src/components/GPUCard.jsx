@@ -14,7 +14,7 @@ export default function GPUCard({ gpu, onEdit, onView }) {
                     hover:shadow-md hover:-translate-y-1 
                     transition duration-300 relative">
 
-      {/* BADGE */}
+      {/* distintivo */}
       <span
         className={`absolute top-3 right-3 text-xs px-2 py-1 rounded-full font-medium ${
           isOutOfStock
@@ -25,7 +25,7 @@ export default function GPUCard({ gpu, onEdit, onView }) {
         {isOutOfStock ? "Sem estoque" : "Disponível"}
       </span>
 
-      {/* HEADER */}
+      {/* cabeçalho */}
       <div>
         <h2 className="text-lg font-semibold text-gray-900">
           {gpu.nome}
@@ -36,7 +36,7 @@ export default function GPUCard({ gpu, onEdit, onView }) {
         </p>
       </div>
 
-      {/* INFO */}
+      {/* Informaçoes */}
       <div className="mt-5 space-y-1">
 
         <p className="text-2xl font-bold text-red-500">
@@ -51,7 +51,7 @@ export default function GPUCard({ gpu, onEdit, onView }) {
         </p>
       </div>
 
-      {/* ACTIONS */}
+      {/* Açoes */}
       <div className="flex gap-2 mt-6">
 
         <button

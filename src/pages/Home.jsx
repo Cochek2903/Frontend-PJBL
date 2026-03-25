@@ -17,14 +17,12 @@ export default function Home() {
       .finally(() => setLoading(false));
   }, []);
 
-  // 🔍 busca inteligente
   const filtered = gpus.filter(gpu =>
     `${gpu.nome} ${gpu.modelo} ${gpu.fabricante}`
       .toLowerCase()
       .includes(search.toLowerCase())
   );
 
-  // 📊 métricas
   const total = gpus.length;
   const semEstoque = gpus.filter(g => g.quantidade === 0).length;
   const disponiveis = total - semEstoque;
@@ -32,7 +30,7 @@ export default function Home() {
   return (
     <div className="bg-gray-100 min-h-screen text-gray-900">
 
-      {/* HEADER */}
+      {/* cabeçalho */}
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-semibold tracking-tight">
           Placas de Vídeo
@@ -46,7 +44,7 @@ export default function Home() {
         </button>
       </div>
 
-      {/* MÉTRICAS */}
+      {/* Metricas */}
       <div className="grid md:grid-cols-3 gap-4 mb-6">
 
         <div className="bg-white border border-gray-200 p-4 rounded-xl shadow-sm">
@@ -70,7 +68,7 @@ export default function Home() {
 
       </div>
 
-      {/* BUSCA */}
+      {/* Busca */}
       <input
         placeholder="Buscar por nome, modelo ou fabricante..."
         className="mb-6 w-full p-3 rounded-xl bg-white border border-gray-200 
@@ -79,18 +77,18 @@ export default function Home() {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      {/* LOADING */}
+      {/* Carregar */}
       {loading && (
         <p className="text-gray-500">Carregando GPUs...</p>
       )}
 
-      {/* LISTA */}
+      {/* Listar */}
       {!loading && filtered.length > 0 && (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filtered.map(gpu => (
             <div key={gpu.id} className="relative">
 
-              {/* STATUS */}
+              {/* Status */}
               <span
                 className={`absolute top-3 right-3 px-2 py-1 text-xs rounded-full ${
                   gpu.quantidade === 0
@@ -111,7 +109,7 @@ export default function Home() {
         </div>
       )}
 
-      {/* VAZIO */}
+      {/* Nulo */}
       {!loading && filtered.length === 0 && (
         <div className="text-center mt-10 text-gray-500">
           <p>Nenhuma GPU encontrada.</p>

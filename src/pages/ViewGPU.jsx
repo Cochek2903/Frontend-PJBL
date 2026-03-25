@@ -32,7 +32,7 @@ export default function ViewGPU() {
 
       <div className="bg-white border border-gray-200 rounded-2xl p-8 w-full max-w-2xl shadow-sm relative">
 
-        {/* STATUS */}
+        {/* Status */}
         <span
           className={`absolute top-5 right-5 px-3 py-1 text-xs rounded-full ${
             isOutOfStock
@@ -43,7 +43,7 @@ export default function ViewGPU() {
           {isOutOfStock ? "Sem estoque" : "Disponível"}
         </span>
 
-        {/* HEADER */}
+        {/* cabeçalho */}
         <div className="mb-6">
           <h1 className="text-3xl font-semibold tracking-tight">
             {gpu.nome}
@@ -54,7 +54,7 @@ export default function ViewGPU() {
           </p>
         </div>
 
-        {/* INFO */}
+        {/* Informações */}
         <div className="space-y-3 text-sm">
 
           <div className="flex justify-between border-b border-gray-100 pb-2">
@@ -83,7 +83,7 @@ export default function ViewGPU() {
 
         </div>
 
-        {/* DESCRIÇÃO */}
+        {/* Descrição */}
         {gpu.descricao && (
           <div className="mt-6">
             <h2 className="text-sm font-semibold mb-2 text-gray-700">

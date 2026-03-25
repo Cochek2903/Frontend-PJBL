@@ -5,7 +5,7 @@ export default function Navbar() {
     <header className="border-b border-gray-200 bg-white/80 backdrop-blur">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
 
-        {/* Logo / Nome */}
+        {/*Nome */}
         <Link 
           to="/" 
           className="text-lg font-semibold text-gray-900 tracking-tight hover:opacity-80 transition"
@@ -19,7 +19,7 @@ export default function Navbar() {
             to="/" 
             className="text-gray-500 hover:text-red-500 transition"
           >
-            Home
+            Voltar
           </Link>
         </nav>
 
